@@ -1,5 +1,7 @@
 <template>
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
+  <input type="text" ref="name" />
+  <button @click="hadleClick">Click Me</button>
 </template>
 
 <script>
@@ -9,6 +11,11 @@ export default {
   data(){ 
     return {
       title: "My First Vue App"
+    }
+  },
+  methods : {
+    hadleClick() {
+      console.log(this.$refs.name)
     }
   }
 }
